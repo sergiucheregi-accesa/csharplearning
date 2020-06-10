@@ -1,31 +1,28 @@
-﻿using Microsoft.Extensions.CommandLineUtils;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using EsportManagementApp.Database;
+using EsportManagementApp.DependencyInjection;
 
 namespace EsportManagementApp
 {
-    class Program 
+    class Program
     {
+        //with IServiceProvider
+        public static readonly IServiceProvider ContainerProvider = new ContainerBuilder().Build();
+
         static void Main(string[] args)
         {
-            var services = ConfigureServices();
+            ////Without IServiceProvider
+            //var container = new DependencyContainer();
+            //container.AddSingleton<DatabaseRepository>();
+            //container.AddSingleton<ProgramManager>();
+            //var resolver = new DependencyResolver(container);
+            //var programManager = resolver.GetService<ProgramManager>();
 
-            var serviceProvider = services.BuildServiceProvider();
+            ////With IServiceProvider
+            var programManager = ContainerProvider.GetService<ProgramManager>();
 
-            serviceProvider.GetService<EsportManagementConsoleApp>().Run();
-
-        }
-
-        private static IServiceCollection ConfigureServices()
-        {
-            IServiceCollection services = new ServiceCollection();
-
-            services.AddLogging();
-            services.AddTransient<EsportManagementConsoleApp>();
-            services.AddTransient<ITestService, TestService>();
-            services.BuildServiceProvider();
-            return services;
+            programManager.Run();
         }
     }
 }
