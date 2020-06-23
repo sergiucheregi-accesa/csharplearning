@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ReposLearn\\EsportManagementApp\\EsportManagementApp.csproj": {}
+    "C:\\ReposLearning\\csharplearning\\EsportManagementApp\\EsportManagementApp.csproj": {}
   },
   "projects": {
-    "C:\\ReposLearn\\EsportManagementApp\\EsportManagementApp.csproj": {
+    "C:\\ReposLearning\\csharplearning\\EsportManagementApp\\EsportManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ReposLearn\\EsportManagementApp\\EsportManagementApp.csproj",
+        "projectUniqueName": "C:\\ReposLearning\\csharplearning\\EsportManagementApp\\EsportManagementApp.csproj",
         "projectName": "EsportManagementApp",
-        "projectPath": "C:\\ReposLearn\\EsportManagementApp\\EsportManagementApp.csproj",
-        "packagesPath": "C:\\Users\\sergiu.cheregi\\.nuget\\packages\\",
-        "outputPath": "C:\\ReposLearn\\EsportManagementApp\\obj\\",
+        "projectPath": "C:\\ReposLearning\\csharplearning\\EsportManagementApp\\EsportManagementApp.csproj",
+        "packagesPath": "C:\\Users\\n7dun\\.nuget\\packages\\",
+        "outputPath": "C:\\ReposLearning\\csharplearning\\EsportManagementApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sergiu.cheregi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\n7dun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://microtrac.pkgs.visualstudio.com/Accesa/_packaging/VG-Dimensions/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -42,14 +38,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.4, )"
-            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -70,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

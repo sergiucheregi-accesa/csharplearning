@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using EsportManagementApp.Database;
 using EsportManagementApp.DependencyInjection;
 
 namespace EsportManagementApp

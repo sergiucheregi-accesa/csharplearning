@@ -1,5 +1,4 @@
-﻿using EsportManagementApp.Database;
-using EsportManagementApp.Model;
+﻿using EsportManagementApp.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +9,7 @@ namespace EsportManagementApp.BusinessLogic
 {
     public class Operations : IOperations
     {
-        private IDatabaseRepository _databaseRepository;
+        //private IDatabaseRepository _databaseRepository;
         private static IList<Player> _localPlayers;
 
         public static IList<Player> LocalPlayers
@@ -19,15 +18,15 @@ namespace EsportManagementApp.BusinessLogic
             set { _localPlayers = value; }
         }
 
-        public Operations(IDatabaseRepository databaseRepository)
-        {
-            _databaseRepository = databaseRepository;
-        }
+        //public Operations(IDatabaseRepository databaseRepository)
+        //{
+        //    _databaseRepository = databaseRepository;
+        //}
 
-        public void PrintAllPlayersFromDatabase()
-        {
-            Console.WriteLine(_databaseRepository.GetPlayers());
-        }
+        //public void PrintAllPlayersFromDatabase()
+        //{
+        //    Console.WriteLine(_databaseRepository.GetPlayers());
+        //}
 
         private static IEnumerable<Player> SortPlayers(string orderBy)
         {

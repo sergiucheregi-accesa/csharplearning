@@ -1,4 +1,4 @@
-﻿using EsportManagementApp.Model;
+﻿using EsportManagementApp.Models;
 using System.Collections.Generic;
 
 namespace EsportManagementApp.BusinessLogic
@@ -10,6 +10,6 @@ namespace EsportManagementApp.BusinessLogic
         void AddPlayer(Player p);
         void RemovePlayer(Player p);
         void SaveChanges();
-        void PrintAllPlayersFromDatabase();
+        //void PrintAllPlayersFromDatabase();
     }
 }

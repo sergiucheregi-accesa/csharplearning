@@ -1,0 +1,16 @@
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EsportManagementApp.exe
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EntityFrameworkLibrary.deps.json
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EntityFrameworkLibrary.runtimeconfig.json
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EntityFrameworkLibrary.runtimeconfig.dev.json
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EntityFrameworkLibrary.dll
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EntityFrameworkLibrary.pdb
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EsportManagementApp.dll
+C:\ReposLearning\csharplearning\EF\bin\Debug\netcoreapp3.1\EsportManagementApp.pdb
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.csprojAssemblyReference.cache
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.AssemblyInfoInputs.cache
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.AssemblyInfo.cs
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.csproj.CoreCompileInputs.cache
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.csproj.CopyComplete
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.dll
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.pdb
+C:\ReposLearning\csharplearning\EF\obj\Debug\netcoreapp3.1\EntityFrameworkLibrary.genruntimeconfig.cache

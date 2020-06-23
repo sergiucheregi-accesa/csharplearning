@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using EsportManagementApp.BusinessLogic;
-using EsportManagementApp.Database;
-using EsportManagementApp.Model;
+using EsportManagementApp.Models;
 
 namespace EsportManagementApp
 {
@@ -21,15 +20,7 @@ namespace EsportManagementApp
         {
 
             Console.WriteLine("works");
-            _operations.PrintAllPlayersFromDatabase();
-
-            //_databaseOperations.Initialise();
-            //GreetUser();
-
-            //while (true)
-            //{
-            //    ExecuteUserInput(GetUserInput());
-            //}
+            //_operations.PrintAllPlayersFromDatabase();
         }
 
         private void ExecuteUserInput(string input)

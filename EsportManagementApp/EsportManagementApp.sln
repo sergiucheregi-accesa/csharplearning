@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsportManagementApp", "EsportManagementApp.csproj", "{F65F4DE5-71D1-4B2B-88B6-169E11ACA5CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkLibrary", "..\EF\EntityFrameworkLibrary.csproj", "{DC56267F-95E3-467C-8132-E2FAB15875F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F65F4DE5-71D1-4B2B-88B6-169E11ACA5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F65F4DE5-71D1-4B2B-88B6-169E11ACA5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F65F4DE5-71D1-4B2B-88B6-169E11ACA5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC56267F-95E3-467C-8132-E2FAB15875F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC56267F-95E3-467C-8132-E2FAB15875F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC56267F-95E3-467C-8132-E2FAB15875F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC56267F-95E3-467C-8132-E2FAB15875F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
