@@ -9,7 +9,6 @@ namespace EsportManagementApp.BusinessLogic
         List<Player> LoadPlayers();
         void AddPlayer(Player p);
         void RemovePlayer(Player p);
-        void SaveChanges();
         //void PrintAllPlayersFromDatabase();
     }
 }

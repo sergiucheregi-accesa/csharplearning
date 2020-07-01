@@ -11,7 +11,7 @@ namespace EsportManagementApp.DependencyInjection
         public IServiceProvider Build()
         {
             var container = new ServiceCollection();
-            container.AddSingleton<IOperations, Operations>();
+            container.AddSingleton<IOperations, PlayerOperations>();
             container.AddSingleton<ProgramManager>();
 
             return container.BuildServiceProvider();
