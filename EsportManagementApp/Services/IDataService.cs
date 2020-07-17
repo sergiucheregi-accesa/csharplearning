@@ -11,6 +11,6 @@ namespace EsportManagementApp.Services
         Task<T> GetByID(int id);
         Task<T> Create(T entity);
         Task<T> Update(int id, T entity);
-        Task<bool> Delete(int id);
+        Task<bool> Delete(T entity);
     }
 }

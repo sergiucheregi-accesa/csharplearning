@@ -11,6 +11,7 @@ namespace EsportManagementApp
         private static string _availableCommands = "You can use the following commands next: \"asc\", \"desc\", \"add\", \"remove\" or \"exit\" to exit the app";
 
         private IOperations _operations;
+        private IEnumerable<Player> _players;
         public ProgramManager(IOperations operations)
         {
             _operations = operations;
@@ -20,7 +21,11 @@ namespace EsportManagementApp
         {
 
             Console.WriteLine("works");
-            //_operations.PrintAllPlayersFromDatabase();
+            _players = _operations.LoadPlayers();
+            foreach (Player p in _players)
+            {
+                Console.WriteLine(p.FirstName + " " + p.LastName);
+            }
         }
 
         private void ExecuteUserInput(string input)

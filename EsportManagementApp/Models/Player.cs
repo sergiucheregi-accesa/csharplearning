@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace EsportManagementApp.Models
-{ 
+{
     public class Player : DomainObject
     {
         public string FirstName { get; set; }

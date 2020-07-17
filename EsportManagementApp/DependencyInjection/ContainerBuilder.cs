@@ -1,4 +1,6 @@
 ﻿using EsportManagementApp.BusinessLogic;
+using EsportManagementApp.Models;
+using EsportManagementApp.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace EsportManagementApp.DependencyInjection
         {
             var container = new ServiceCollection();
             container.AddSingleton<IOperations, PlayerOperations>();
+            container.AddSingleton<IDataService<Player>>();
             container.AddSingleton<ProgramManager>();
 
             return container.BuildServiceProvider();

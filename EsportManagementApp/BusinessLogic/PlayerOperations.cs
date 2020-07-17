@@ -5,19 +5,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace EsportManagementApp.BusinessLogic
 {
     public class PlayerOperations : IOperations
     {
         private IDataService<Player> _databaseRepository;
-        private static IList<Player> _localPlayers;
-
-        public static IList<Player> LocalPlayers
-        {
-            get { return _localPlayers; }
-            set { _localPlayers = value; }
-        }
+        private static IEnumerable<Player> _localPlayers;
 
         public PlayerOperations(IDataService<Player> databaseRepository)
         {
@@ -26,7 +21,7 @@ namespace EsportManagementApp.BusinessLogic
 
         public void AddPlayer(Player p)
         {
-            throw new NotImplementedException();
+            _databaseRepository.Create(p);
         }
 
         public void Initialise()
@@ -34,25 +29,18 @@ namespace EsportManagementApp.BusinessLogic
             throw new NotImplementedException();
         }
 
-        public List<Player> LoadPlayers()
+        public IEnumerable<Player> LoadPlayers()
         {
-            throw new NotImplementedException();
+             _localPlayers = _databaseRepository.GetAll().Result;
+
+            return _localPlayers;
         }
 
         public void RemovePlayer(Player p)
         {
-            throw new NotImplementedException();
+            _databaseRepository.Delete(p);
         }
 
-        public static bool RemovePlayer(string name, string lastName)
-        {
-
-        }
-
-        //public void PrintAllPlayersFromDatabase()
-        //{
-        //    Console.WriteLine(_databaseRepository.GetPlayers());
-        //}
 
         private static IEnumerable<Player> SortPlayers(string orderBy)
         {
@@ -72,14 +60,12 @@ namespace EsportManagementApp.BusinessLogic
         private static string GetCurrentPlayersInFormattedString()
         {
             var sb = new StringBuilder();
-            foreach (Player p in LocalPlayers)
+            foreach (Player p in _localPlayers)
             {
                 sb.AppendFormat("{0},{1},{2},{3}{4}", p.FirstName, p.LastName, p.Age, p.Experience, System.Environment.NewLine);
             }
 
             return sb.ToString();
         }
-       
-
     }
 }

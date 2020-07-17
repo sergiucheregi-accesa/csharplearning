@@ -4,6 +4,7 @@ using EsportManagementApp.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,11 +31,11 @@ namespace EntityFrameworkLibrary.Services
             }
         }
 
-        public async Task<bool> Delete(int id)
+        public async Task<bool> Delete(T entityToDelete)
         {
             using (EsportMgmtDatabaseContext context = _context.CreateDbContext())
             {
-                T entity = await context.Set<T>().FirstOrDefaultAsync(x => x.ID == id);
+                T entity = await context.Set<T>().FirstOrDefaultAsync(x => x == entityToDelete);
                 context.Set<T>().Remove(entity);
                 await context.SaveChangesAsync();
 
