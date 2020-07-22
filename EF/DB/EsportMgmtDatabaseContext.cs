@@ -1,4 +1,4 @@
-﻿using EsportManagementApp.Models;
+﻿using EntityFrameworkLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkLibrary.DB

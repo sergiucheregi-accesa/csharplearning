@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EsportManagementApp.Models
+namespace EntityFrameworkLibrary.Models
 {
     public class Team : DomainObject
     {

@@ -1,6 +1,6 @@
-﻿using EsportManagementApp.BusinessLogic;
-using EsportManagementApp.Models;
-using EsportManagementApp.Services;
+﻿using EntityFrameworkLibrary.DB;
+using EsportManagementApp.BusinessLogic;
+using EntityFrameworkLibrary.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -13,8 +13,9 @@ namespace EsportManagementApp.DependencyInjection
         public IServiceProvider Build()
         {
             var container = new ServiceCollection();
-            container.AddSingleton<IOperations, PlayerOperations>();
-            container.AddSingleton<IDataService<Player>>();
+            container.AddSingleton<IPlayerOperations, PlayerOperations>();
+            container.AddSingleton<EsportMgmtDatabaseContextFactory>();
+            container.AddSingleton<PlayerDataService>();
             container.AddSingleton<ProgramManager>();
 
             return container.BuildServiceProvider();

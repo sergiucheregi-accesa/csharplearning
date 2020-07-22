@@ -1,5 +1,5 @@
-﻿using EsportManagementApp.Models;
-using EsportManagementApp.Services;
+﻿using EntityFrameworkLibrary.Models;
+using EntityFrameworkLibrary.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,65 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EsportManagementApp.BusinessLogic
 {
-    public class PlayerOperations : IOperations
+    public class PlayerOperations : IPlayerOperations
     {
-        private IDataService<Player> _databaseRepository;
-        private static IEnumerable<Player> _localPlayers;
+        private PlayerDataService _playerDataService;
+        private IEnumerable<Player> _allPlayers;
 
-        public PlayerOperations(IDataService<Player> databaseRepository)
+        public PlayerOperations(PlayerDataService playerDataService)
         {
-            _databaseRepository = databaseRepository;
-        }
-
-        public void AddPlayer(Player p)
-        {
-            _databaseRepository.Create(p);
+            _playerDataService = playerDataService;
         }
 
         public void Initialise()
         {
-            throw new NotImplementedException();
+            
         }
 
-        public IEnumerable<Player> LoadPlayers()
+        public IEnumerable<Player> GetPlayers()
         {
-             _localPlayers = _databaseRepository.GetAll().Result;
+            var players = _playerDataService.GetAll().Result;
 
-            return _localPlayers;
+            return players;
         }
 
-        public void RemovePlayer(Player p)
+        public async Task AddPlayer(Player p)
         {
-            _databaseRepository.Delete(p);
+            await _playerDataService.Create(p);
         }
 
-
-        private static IEnumerable<Player> SortPlayers(string orderBy)
+        public async Task RemovePlayer(Player p)
         {
-            yield return new Player();
-            IEnumerable<Player> orderedPlayers = orderBy switch
-            {
-                "asc" => _localPlayers.OrderBy(x => x.FirstName),
-                "desc" => _localPlayers.OrderByDescending(x => x.FirstName),
-                _ => _localPlayers,
-            };
-            foreach (Player p in orderedPlayers)
-            {
-                yield return p;
-            }
-        }
-
-        private static string GetCurrentPlayersInFormattedString()
-        {
-            var sb = new StringBuilder();
-            foreach (Player p in _localPlayers)
-            {
-                sb.AppendFormat("{0},{1},{2},{3}{4}", p.FirstName, p.LastName, p.Age, p.Experience, System.Environment.NewLine);
-            }
-
-            return sb.ToString();
+            await _playerDataService.Delete(p);
         }
     }
 }
